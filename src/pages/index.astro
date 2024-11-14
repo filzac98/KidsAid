@@ -1,16 +1,26 @@
 ---
-
+// index.astro
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/Hero.astro";
+import Card from "../components/Card.astro";
+import "../styles/global.css";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>KidsAid</title>
-  </head>
-  <body>
-    <h1>KidsAid</h1>
-  </body>
-</html>
+<MainLayout title="KidsAid - Bringing Smiles to Kids" currentPage="home">
+  <Hero
+    title="Welcome to KidsAid"
+    text="Helping sick and vulnerable children and their families."
+    text2="Creating joyful experiences in and out of hospitals."
+    imageSrc="/images/hero.webp"
+    showContent={true}
+  />
+  <section class="card-section">
+    <h2 class="section-title">Section Title</h2>
+    <div class="card-grid">
+      <Card imageSrc="/path/to/image1.jpg" title="Card 1" />
+      <Card imageSrc="/path/to/image2.jpg" title="Card 2" />
+      <Card imageSrc="/path/to/image3.jpg" title="Card 3" />
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+</MainLayout>

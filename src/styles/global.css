@@ -1,0 +1,124 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fredoka+One&family=Nunito:wght@400;700&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables for Colors and Fonts */
+:root {
+  --primary-bg: #faf9f6;
+  --secondary-bg: #b28dff;
+  --primary-color: #ffffff;
+  --secondary-color: #333333;
+  --accent-color: #ff6b6b;
+  --button-bg: #ffdf6b; /* Brighter yellow for buttons */
+  --button-text: #333333;
+  --hover-color: #ff8b8b;
+  /* Font Styles */
+  --font-family: "Fredoka One", sans-serif;
+  --font-family2: "Nunito", sans-serif;
+  --font-size-base: 16px;
+}
+
+/* Body */
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--primary-color);
+  background-color: var(--primary-bg);
+}
+
+/* Header Styling */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--secondary-bg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Støtlogo Styling */
+.støtlogo img {
+  width: 100px;
+}
+
+/* Logo Styling */
+.logo {
+  flex: 1;
+  text-align: center; /* Centers the KidsAid logo */
+}
+
+.logo img {
+  width: 180px;
+}
+
+/* Navigation Menu */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* Card Section */
+.card-section {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    width: 100%; /* Full width on mobile */
+    right: 0; /* Ensure it's aligned to the right */
+  }
+
+  .burger-menu {
+    font-size: 1.5rem;
+  }
+
+  .logo img {
+    width: 150px; /* Adjust size for smaller screens */
+  }
+}
+
+/************* Footer Section ******************/
+
+.address {
+  color: var(--accent-color);
+  font-family: var(--font-family);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-link {
+  color: #b28dff;
+  font-size: 38px;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: var(--hover-color);
+}
