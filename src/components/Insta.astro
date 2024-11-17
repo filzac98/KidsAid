@@ -1,0 +1,17 @@
+---
+const { embedCode } = Astro.props;
+---
+
+<div class="insta-card">
+  <div class="insta-content" set:html={embedCode} />
+
+  <!-- Dynamically load the Instagram script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.instagram.com/embed.js";
+      document.body.appendChild(script);
+    });
+  </script>
+</div>

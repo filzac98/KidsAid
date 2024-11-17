@@ -1,8 +1,7 @@
 ---
-// index.astro
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
-import Card from "../components/Card.astro";
+import Insta from "../components/Insta.astro";
 import "../styles/global.css";
 ---
 
@@ -14,13 +13,53 @@ import "../styles/global.css";
     imageSrc="/images/hero.webp"
     showContent={true}
   />
-  <section class="card-section">
-    <h2 class="section-title">Section Title</h2>
-    <div class="card-grid">
-      <Card imageSrc="/path/to/image1.jpg" title="Card 1" />
-      <Card imageSrc="/path/to/image2.jpg" title="Card 2" />
-      <Card imageSrc="/path/to/image3.jpg" title="Card 3" />
-      <!-- Add more cards as needed -->
+  <section class="instacard-section">
+    <h2 class="section-title">Instagram Posts</h2>
+    <div class="instacard-grid">
+      <Insta
+        title="Post 1"
+        embedCode={`
+          <blockquote 
+            class="instagram-media"  
+            data-instgrm-permalink=https://www.instagram.com/p/C5F81EnIYp6/?img_index=1"
+            style="max-width: 100px; margin: auto;">
+          </blockquote>
+          <script async src="//www.instagram.com/embed.js"></script>
+        `}
+      />
+      <Insta
+        title="Post 2"
+        embedCode={`
+          <blockquote 
+            class="instagram-media"  
+            data-instgrm-permalink="https://www.instagram.com/p/C8et6e6Mz11/?img_index=1"
+            style="max-width: 100px; margin: auto;">
+          </blockquote>
+          <script async src="//www.instagram.com/embed.js"></script>
+        `}
+      />
+      <Insta
+        title="Post 3"
+        embedCode={`
+          <blockquote 
+            class="instagram-media"  
+            data-instgrm-permalink="https://www.instagram.com/p/C4YGPScK9bn/?img_index=1"
+            style="max-width: 100px; margin: auto;">
+          </blockquote>
+          <script async src="//www.instagram.com/embed.js"></script>
+        `}
+      />
+      <Insta
+        title="Post 4"
+        embedCode={`
+          <blockquote 
+            class="instagram-media"  
+            data-instgrm-permalink="https://www.instagram.com/p/C6X9YoQCXmn/?img_index=1"
+            style="max-width: 100px; margin: auto;">
+          </blockquote>
+          <script async src="//www.instagram.com/embed.js"></script>
+        `}
+      />
     </div>
   </section>
 </MainLayout>

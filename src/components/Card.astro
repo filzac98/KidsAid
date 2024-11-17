@@ -1,31 +1,9 @@
 ---
-// Props for Card.astro to receive an image source and title
-const { imageSrc, title } = Astro.props;
+const { title, imageSrc, href, alt } = Astro.props;
+import "../styles/global.css";
 ---
 
-<div class="card">
-  <img src={imageSrc} alt={title} class="card-image" />
-  <h2 class="card-title">{title}</h2>
-</div>
-
-<style>
-  .card {
-    width: 100px; /* Adjust based on your layout */
-    padding: 1rem;
-    background-color: #ccc; /* Placeholder color */
-    border-radius: 8px;
-    text-align: center;
-  }
-
-  .card-image {
-    width: 80%;
-    height: auto;
-    margin-bottom: 0.5rem;
-    border-radius: 4px;
-  }
-
-  .card-title {
-    font-size: 1rem;
-    color: #333;
-  }
-</style>
+<a class="card" href={href}>
+  <h3>{title}</h3>
+  <img src={imageSrc} alt={alt} />
+</a>
