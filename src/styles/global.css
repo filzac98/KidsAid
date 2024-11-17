@@ -1,6 +1,8 @@
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fredoka+One&family=Nunito:wght@400;700&display=swap");
-
+html {
+  scroll-behavior: smooth;
+}
 /* Global Styles */
 * {
   margin: 0;
@@ -143,6 +145,11 @@ body {
   padding: 2rem;
 }
 
+/* .instacard-section {
+  background: linear-gradient(to bottom, #a4d6f9, transparent 100%);
+  padding: 2rem;
+} */
+
 .instacard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Dynamic smaller grid items */
@@ -166,6 +173,66 @@ body {
 }
 .insta-card:nth-child(6) {
   transform: translateY(-180px); /* Adjust for offsets */
+}
+
+/********** About Section **********/
+/* About Section */
+.about-section {
+  background-color: #f8f9fa; /* Light background */
+  padding: 2rem;
+  color: #333333;
+}
+
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  flex: 1 1 40%;
+}
+
+.about-content {
+  flex: 1 1 60%;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.about-btn {
+  background-color: #a4d6f9; /* Match your brand colors */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #84b8da; /* Hover color */
+}
+
+.dropdown-text {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  display: none; /* Hidden by default */
+}
+
+.dropdown-text.show {
+  display: block; /* Show when toggled */
 }
 /* Responsive Adjustments */
 @media (max-width: 768px) {
