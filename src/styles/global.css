@@ -162,7 +162,7 @@ body {
   transform: translateY(-180px); /* Adjust for offsets */
 }
 .insta-card:nth-child(5) {
-  transform: translateY(-80px); /* Adjust for offsets */
+  transform: translate(0px, -80px) scale(1.3); /* Adjust for offsets */
 }
 .insta-card:nth-child(6) {
   transform: translateY(-180px); /* Adjust for offsets */
