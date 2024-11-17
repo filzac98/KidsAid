@@ -125,6 +125,8 @@ body {
   margin: 1rem;
   font-family: Arial, sans-serif;
   height: 63.5%;
+
+  transition: transform 0.3s ease-in-out; /* Transition for smooth scaling */
 }
 
 .insta-content {
@@ -145,18 +147,13 @@ body {
   padding: 2rem;
 }
 
-/* .instacard-section {
-  background: linear-gradient(to bottom, #a4d6f9, transparent 100%);
-  padding: 2rem;
-} */
-
 .instacard-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Dynamic smaller grid items */
   gap: 1.5rem; /* Increased spacing */
 }
 .insta-card:nth-child(1) {
-  transform: translate(-80px, 120px) scale(1); /* Example with multiple transforms */
+  transform: translate(-80px, 120px); /* Example with multiple transforms */
 }
 .insta-card:nth-child(2) {
   transform: translateY(120px); /* Adjust for offsets */
@@ -173,6 +170,10 @@ body {
 }
 .insta-card:nth-child(6) {
   transform: translateY(-180px); /* Adjust for offsets */
+}
+
+.insta-card:hover {
+  transform: scale(1.1); /* Only scale the content on hover */
 }
 
 /********** About Section **********/
