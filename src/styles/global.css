@@ -119,15 +119,19 @@ body {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 328px;
+  max-width: 246px; /* Controls the overall width */
   margin: 1rem;
   font-family: Arial, sans-serif;
-  height: auto;
+  height: 63.5%;
 }
 
 .insta-content {
-  width: 100%;
-  display: block;
+  transform: scale(
+    0.75
+  ); /* Shrinks the Instagram embed without cutting it off */
+  transform-origin: top left; /* Ensures scaling starts from the top left corner */
+  width: 100%; /* Maintain 100% width for proper scaling */
+  height: auto; /* Keep the aspect ratio intact */
 }
 
 .instacard-section {
@@ -135,13 +139,33 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  background-color: #a4d6f9; /* Light blue background as shown */
+  background-color: #a4d6f9; /* Light blue background */
   padding: 2rem;
 }
 
 .instacard-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; /* Dynamic smaller grid items */
+  gap: 1.5rem; /* Increased spacing */
+}
+.insta-card:nth-child(1) {
+  transform: translate(-80px, 120px) scale(1); /* Example with multiple transforms */
+}
+.insta-card:nth-child(2) {
+  transform: translateY(120px); /* Adjust for offsets */
+}
+
+.insta-card:nth-child(3) {
+  transform: translate(80px, 120px); /* Adjust for offsets */
+}
+.insta-card:nth-child(4) {
+  transform: translateY(-180px); /* Adjust for offsets */
+}
+.insta-card:nth-child(5) {
+  transform: translateY(-80px); /* Adjust for offsets */
+}
+.insta-card:nth-child(6) {
+  transform: translateY(-180px); /* Adjust for offsets */
 }
 /* Responsive Adjustments */
 @media (max-width: 768px) {

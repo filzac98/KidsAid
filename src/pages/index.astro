@@ -14,7 +14,6 @@ import "../styles/global.css";
     showContent={true}
   />
   <section class="instacard-section">
-    <h2 class="section-title">Instagram Posts</h2>
     <div class="instacard-grid">
       <Insta
         title="Post 1"
@@ -55,6 +54,28 @@ import "../styles/global.css";
           <blockquote 
             class="instagram-media"  
             data-instgrm-permalink="https://www.instagram.com/p/C6X9YoQCXmn/?img_index=1"
+            style="max-width: 100px; margin: auto;">
+          </blockquote>
+          <script async src="//www.instagram.com/embed.js"></script>
+        `}
+      />
+      <Insta
+        title="Post 5"
+        embedCode={`
+          <blockquote 
+            class="instagram-media"  
+            data-instgrm-permalink="https://www.instagram.com/p/C17Q7VQMK4e/?img_index=1"
+            style="max-width: 100px; margin: auto;">
+          </blockquote>
+          <script async src="//www.instagram.com/embed.js"></script>
+        `}
+      />
+      <Insta
+        title="Post 6"
+        embedCode={`
+          <blockquote 
+            class="instagram-media"  
+            data-instgrm-permalink="https://www.instagram.com/p/C1Y6r9rs3Zx/?img_index=1"
             style="max-width: 100px; margin: auto;">
           </blockquote>
           <script async src="//www.instagram.com/embed.js"></script>
