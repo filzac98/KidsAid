@@ -345,25 +345,57 @@ body {
 .carousel .list .item .content .topic {
   color: #f1683a;
 }
-
+/* Buttons container */
 .carousel .list .item .content .buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 130px);
-  grid-template-rows: 40px;
-  gap: 5px;
-  margin-top: 20px;
+  position: absolute; /* Allow precise positioning */
+  bottom: -300px; /* Place at the bottom */
+  left: 20px; /* Place at the left */
+  display: flex; /* Ensure buttons remain inline */
 }
+
+/* Button styling */
 .carousel .list .item .content button {
   border: none;
-  background-color: #eee;
+  background-color: #f1683a; /* Orange color for the button */
+  color: #fff; /* White text */
   letter-spacing: 3px;
   font-family: var(--font-family);
   font-weight: 500;
+  padding: 10px 20px; /* Add padding for a better click area */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.carousel .list .item .content button:nth-child(2) {
-  background-color: transparent;
-  color: #eee;
-  border: 1px solid #eee;
+
+/* Button hover state */
+.carousel .list .item .content button:hover {
+  background-color: #d0552e; /* Darker shade of orange */
+}
+
+/* Dropdown content styling */
+.carousel .list .item .dropdown-content {
+  display: none; /* Hidden by default */
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: #fff; /* Light background */
+  color: #333; /* Dark text */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 1rem;
+  line-height: 1.5;
+  position: absolute;
+  bottom: -180%; /* Position dropdown below the button */
+  left: 20px; /* Align dropdown with the button */
+  width: calc(
+    100% - 40px
+  ); /* Stretch dropdown to fit content area, accounting for left padding */
+  z-index: 10;
+}
+
+/* Show the dropdown when active */
+.carousel .list .item .dropdown-content.show {
+  display: block;
 }
 
 /******* Thumbnail *********/

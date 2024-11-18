@@ -1,0 +1,23 @@
+---
+// CarouselItem.astro
+const { image, author, title, topic, description, dropdownContent } =
+  Astro.props;
+---
+
+<div class="item">
+  <img src={image} alt={title} />
+  <div class="content">
+    <div class="author">{author}</div>
+    <div class="title">{title}</div>
+    <div class="topic">{topic}</div>
+    <div class="des">{description}</div>
+    <div class="buttons">
+      <button class="carousel-btn">LÆS MERE</button>
+    </div>
+    <!-- Dropdown content -->
+    <div class="dropdown-content">
+      <h2>Additional Information</h2>
+      <p>{dropdownContent}</p>
+    </div>
+  </div>
+</div>

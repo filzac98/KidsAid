@@ -1,0 +1,62 @@
+---
+// Carousel.astro
+import CarouselItem from "./CarouselItem.astro";
+
+const items = [
+  {
+    image: "/images/hero.webp",
+    author: "TRYLLEKUNSTNER",
+    title: "TRYLLEPATRULJEN",
+    topic: "GENERELT",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, nisi!",
+    dropdownContent:
+      'This is the content that appears when you click "SEE MORE." Add your links, text, or any other information here.',
+  },
+  {
+    image: "/images/slider2.png",
+    author: "TRYLLEKUNSTNER 2",
+    title: "ØNSKEBRØNDEN",
+    topic: "NUMBER 2",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, nisi!",
+    dropdownContent:
+      'This is the content that appears when you click "SEE MORE." Add your links, text, or any other information here.',
+  },
+  {
+    image: "/images/slider3.png",
+    author: "TRYLLEKUNSTNER 3",
+    title: "EVENTS OG INDSAMLINGER",
+    topic: "NUMBER 3",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, nisi!",
+    dropdownContent:
+      'This is the content that appears when you click "SEE MORE." Add your links, text, or any other information here.',
+  },
+  {
+    image: "/images/slider4.png",
+    author: "TRYLLEKUNSTNER 4",
+    title: "STØT NU",
+    topic: "NUMBER 4",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum, nisi!",
+    dropdownContent:
+      'This is the content that appears when you click "SEE MORE." Add your links, text, or any other information here.',
+  },
+];
+---
+
+<div class="list">
+  {
+    items.map((item) => (
+      <CarouselItem
+        image={item.image}
+        author={item.author}
+        title={item.title}
+        topic={item.topic}
+        description={item.description}
+        dropdownContent={item.dropdownContent}
+      />
+    ))
+  }
+</div>
