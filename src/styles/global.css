@@ -139,11 +139,11 @@ body {
 }
 
 .instacard-section {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  background-color: #a4d6f9; /* Light blue background */
+  background-color: #c9ffba; /* Light blue background */
   padding: 2rem;
 }
 

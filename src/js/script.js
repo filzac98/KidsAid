@@ -5,6 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   readMoreBtn.addEventListener("click", () => {
     const isExpanded = dropdownText.classList.contains("show");
     dropdownText.classList.toggle("show");
-    readMoreBtn.textContent = isExpanded ? "Read More" : "Read Less";
+    readMoreBtn.textContent = isExpanded ? "Læs Mere" : "Læs Mindre";
   });
 });
