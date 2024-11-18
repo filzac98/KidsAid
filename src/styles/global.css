@@ -309,6 +309,7 @@ body {
   overflow: hidden;
   margin-top: 50px;
   position: relative;
+  font-family: var(--font-family);
 }
 .carousel .list .item {
   position: absolute;
@@ -356,7 +357,7 @@ body {
   border: none;
   background-color: #eee;
   letter-spacing: 3px;
-  font-family: Poppins;
+  font-family: var(--font-family);
   font-weight: 500;
 }
 .carousel .list .item .content button:nth-child(2) {
