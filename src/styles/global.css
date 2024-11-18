@@ -276,6 +276,31 @@ body {
   line-height: 1.8; /* Increases spacing between lines for clarity */
 }
 
+.valgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid1 {
+  text-align: center;
+}
+
+.grid1 h2 {
+  font-size: xx-large;
+}
+
+.valtekst {
+  text-align: left;
+}
+.valtekst img {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+
+.grid1 img {
+  width: 50%;
+}
+
 /********* CAROUSEL **********/
 
 .carousel {
