@@ -52,6 +52,7 @@ const { currentPage } = Astro.props;
 
   .støtlogo {
     flex: 1;
+    z-index: 1000; /* Ensure the burger icon is on top */
   }
 
   .støtlogo-img {
@@ -61,10 +62,12 @@ const { currentPage } = Astro.props;
   .logo {
     flex: 1;
     text-align: center; /* Centers the KidsAid logo */
+    z-index: 1000; /* Ensure the burger icon is on top */
   }
 
   .logo-img {
     width: 180px; /* Adjust size as needed */
+    z-index: 1000; /* Ensure the burger icon is on top */
   }
 
   .main-nav {
@@ -90,7 +93,7 @@ const { currentPage } = Astro.props;
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #333333;
+    background-color: #2bd79b;
     margin: 5px auto;
     transition:
       transform 0.3s ease,
@@ -114,7 +117,7 @@ const { currentPage } = Astro.props;
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #b28dff;
+    background-color: #2bd79b;
     position: absolute;
     top: 100%; /* Position below the header */
     right: 0;

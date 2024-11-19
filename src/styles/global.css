@@ -305,9 +305,9 @@ body {
 
 .carousel {
   width: 100vw;
-  height: 55vw;
+  height: 54vw;
   overflow: hidden;
-  margin-top: 50px;
+  margin-top: -82px;
   position: relative;
   font-family: var(--font-family);
 }
@@ -354,7 +354,7 @@ body {
 }
 
 /* Button styling */
-.carousel .list .item .content button {
+.carousel .list .item .content .buttons {
   border: none;
   background-color: #f1683a; /* Orange color for the button */
   color: #fff; /* White text */
@@ -368,7 +368,7 @@ body {
 }
 
 /* Button hover state */
-.carousel .list .item .content button:hover {
+.carousel .list .item .content .buttons:hover {
   background-color: #d0552e; /* Darker shade of orange */
 }
 
