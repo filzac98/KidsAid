@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import Insta from "../components/Insta.astro";
-import Carousel from "../components/Carousel.astro";
+import Support from "../components/Support.astro";
 import "../styles/global.css";
 ---
 
@@ -13,6 +13,7 @@ import "../styles/global.css";
     image3="/images/slider3.png"
     image4="/images/slider4.png"
   />
+  <section class="gradient-transition"></section>
   <section class="instacard-section">
     <div class="instacard-grid">
       <Insta
@@ -223,6 +224,8 @@ import "../styles/global.css";
       </div>
     </div>
   </section>
+
+  <Support />
 
   <script src="../js/script.js"></script>
   <script src="../js/app.js"></script>

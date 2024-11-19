@@ -22,8 +22,8 @@ html {
   --button-text: #333333;
   --hover-color: #ff8b8b;
   /* Font Styles */
-  --font-family: "Fredoka One", sans-serif;
-  --font-family2: "Nunito", sans-serif;
+  --font-family: "Nunito", sans-serif;
+  --font-family2: "Roboto", sans-serif;
   --font-family3: "Poppins", sans-serif;
   --font-size-base: 16px;
 }
@@ -32,7 +32,7 @@ html {
 body {
   font-family: "Nunito", sans-serif;
   color: var(--primary-color);
-  background-color: #333333;
+  background-color: #c9ffba;
 }
 
 /* Header Styling */
@@ -68,52 +68,13 @@ body {
   position: relative;
 }
 
-/* Card Section */
-.card-section {
-  padding: 40px 20px; /* Adjust as needed */
-  text-align: center; /* Center the content */
+.gradient-transition {
+  height: 90px; /* Adjust height as needed */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #a8f2a6 100%);
+  margin-top: -90px; /* Pulls the gradient upwards to overlap the Hero section */
+  z-index: 10000; /* Ensure it appears on top */
+  position: relative; /* Keeps it in the document flow while allowing overlap */
 }
-
-.card-section h2 {
-  font-family: var(--font-family3);
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: var(--accent-color);
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Space between the categories */
-  max-width: 1200px; /* Center the grid within a max width */
-  margin: 0 auto; /* Center the grid */
-}
-
-.card {
-  display: block; /* Ensures the card acts as a block element */
-  text-align: center; /* Center the text within the card */
-  overflow: hidden; /* Prevent overflow */
-  transition: transform 0.3s ease; /* Add transition for hover effect */
-  text-decoration: none;
-}
-
-.card:hover {
-  transform: scale(1.05); /* Scale up on hover */
-}
-
-.card h3 {
-  font-family: var(--font-family);
-  margin-bottom: 10px;
-  color: var(--accent-color);
-}
-
-.card img {
-  width: 100%; /* Make images responsive */
-  height: 200px; /* Set a fixed height */
-  object-fit: cover; /* Ensure images cover the box */
-  border-radius: 8px 8px 0 0; /* Round the top corners */
-}
-
 /************* Instagram cards ***************/
 .insta-card {
   background: white;
@@ -125,7 +86,6 @@ body {
   margin: 1rem;
   font-family: Arial, sans-serif;
   height: 63.5%;
-
   transition: transform 0.3s ease-in-out; /* Transition for smooth scaling */
 }
 
@@ -143,8 +103,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-  background-color: #c9ffba; /* Light blue background */
   padding: 2rem;
+  background-color: #a8f2a6; /* Match this with the end gradient color */
+  padding-top: 20px;
 }
 
 .instacard-grid {
@@ -310,6 +271,9 @@ body {
   margin-top: -82px;
   position: relative;
   font-family: var(--font-family);
+  background: linear-gradient(to bottom, transparent 70%, #a8f2a6 100%);
+  padding-bottom: 50px;
+  z-index: 1; /* Ensure it overlaps the next section */
 }
 .carousel .list .item {
   position: absolute;
@@ -370,32 +334,6 @@ body {
 /* Button hover state */
 .carousel .list .item .content .buttons:hover {
   background-color: #d0552e; /* Darker shade of orange */
-}
-
-/* Dropdown content styling */
-.carousel .list .item .dropdown-content {
-  display: none; /* Hidden by default */
-  margin-top: 20px;
-  padding: 1rem;
-  background-color: #fff; /* Light background */
-  color: #333; /* Dark text */
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  font-size: 1rem;
-  line-height: 1.5;
-  position: absolute;
-  bottom: -180%; /* Position dropdown below the button */
-  left: 20px; /* Align dropdown with the button */
-  width: calc(
-    100% - 40px
-  ); /* Stretch dropdown to fit content area, accounting for left padding */
-  z-index: 10;
-}
-
-/* Show the dropdown when active */
-.carousel .list .item .dropdown-content.show {
-  display: block;
 }
 
 /******* Thumbnail *********/
@@ -622,29 +560,6 @@ body {
   .carousel .list .item .content .title {
     font-size: 30px;
   }
-}
-/************* Footer Section ******************/
-
-.address {
-  color: var(--accent-color);
-  font-family: var(--font-family);
-}
-
-/* Social Links */
-.social-links {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.social-link {
-  color: #b28dff;
-  font-size: 38px;
-  text-decoration: none;
-}
-
-.social-link:hover {
-  color: var(--hover-color);
 }
 
 /* Responsive Adjustments */
