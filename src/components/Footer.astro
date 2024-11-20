@@ -3,14 +3,30 @@ import "../styles/global.css";
 ---
 
 <footer class="footer">
+  <a href="#header"
+    ><img
+      src="/images/KidsAid_Logo_Negative.png"
+      alt="KidsAid Logo"
+      class="footer-logo"
+      style="margin-bottom: 3%;"
+    />
+  </a>
   <div class="footer-grid">
     <!-- Section: About -->
     <div class="footer-column">
       <h3>Om Os</h3>
       <ul>
-        <li><a href="#">Nyheder</a></li>
-        <li><a href="#">KidsAid Ambassadører</a></li>
-        <li><a href="#">KidsAid Organisation</a></li>
+        <li><a href="https://kidsaid.dk/nyheder/">Nyheder</a></li>
+        <li>
+          <a href="https://kidsaid.dk/om-kidsaid/ambassadoerer/"
+            >KidsAid Ambassadører</a
+          >
+        </li>
+        <li>
+          <a href="https://kidsaid.dk/om-kidsaid/organisationen/"
+            >KidsAid Organisation</a
+          >
+        </li>
       </ul>
     </div>
 
@@ -26,106 +42,184 @@ import "../styles/global.css";
     <div class="footer-column">
       <h3>Regnskaber</h3>
       <ul>
-        <li><a href="#">Overskudserklæring 2021</a></li>
-        <li><a href="#">Ledelsesberetning 2022</a></li>
-        <li><a href="#">Indsamlingsregnskab 2023</a></li>
-        <li><a href="#">Årsrapport 2022</a></li>
+        <li>
+          <a
+            href="https://kidsaid.dk/wp-content/uploads/2023/06/Overskudserklaering-underskrevet.pdf"
+            >Overskudserklæring 2021</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://kidsaid.dk/wp-content/uploads/2023/04/KidsAid-Ledelsesberetning-2022.pdf"
+            >Ledelsesberetning 2022</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://kidsaid.dk/wp-content/uploads/2024/08/Indsamlingsregnskab-signed.pdf"
+            >Indsamlingsregnskab 2023</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://kidsaid.dk/wp-content/uploads/2023/04/KidsAid-A%CC%8Arsrapport-2022.pdf"
+            >Årsrapport 2022</a>
+        </li>
       </ul>
     </div>
   </div>
 
   <!-- Footer Bottom -->
   <div class="footer-bottom">
-    <a href="#header"
-      ><img
-        src="/images/KidsAid_Logo_Negative.png"
-        alt="KidsAid Logo"
-        class="footer-logo"
-      />
-      <div class="social-links"></div></a
-    >
-
-    <a
-      href="https://www.instagram.com/kidsAid"
-      target="_blank"
-      class="social-link"
-    >
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a
-      href="https://www.facebook.com/kidsAid"
-      target="_blank"
-      class="social-link"
-    >
-      <i class="fab fa-facebook-square"></i>
-    </a>
+    <div class="social-links">
+      <a
+        href="https://www.instagram.com/kidsaiddk/"
+        target="_blank"
+        class="social-link"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a
+        href="https://www.facebook.com/KidsAidDanmark/"
+        target="_blank"
+        class="social-link"
+      >
+        <i class="fab fa-facebook-square"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/kidsaiddanmark/"
+        target="_blank"
+        class="social-link"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
   </div>
+
+  <style>
+    .footer {
+      background-color: #a7e9af; /* Soft green */
+      padding: 2rem;
+      text-align: center;
+      font-family: "Kantumruy Pro", sans-serif;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-column h3 {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #f1683a;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column a {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
+    }
+    .footer-column p {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: #f4a261;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .footer-logo {
+      max-height: 50px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .social-link {
+      color: #ffffff;
+      font-size: 38px;
+      text-decoration: none;
+    }
+
+    .social-link:hover {
+      color: var(--hover-color);
+    }
+
+    @media (max-width: 1024px) {
+      /* Change to 2-column grid for tablets */
+      .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      /* Adjust logo size for tablets */
+      .footer-logo {
+        max-height: 45px;
+      }
+
+      .footer-column h3 {
+        font-size: 1.5rem;
+      }
+
+      .footer-column a {
+        font-size: 1.1rem;
+      }
+    }
+    /* Mobile First */
+    @media (max-width: 768px) {
+      /* Stack the grid in a single column */
+      .footer-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+      }
+
+      /* Make the footer logo smaller */
+      .footer-logo {
+        max-height: 40px;
+      }
+
+      /* Adjust the social links layout */
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      /* Adjust spacing of text in footer columns */
+      .footer-column h3 {
+        font-size: 1.2rem;
+      }
+
+      .footer-column a {
+        font-size: 0.8rem;
+      }
+      .footer-column p {
+        font-size: 0.8rem;
+      }
+    }
+
+    /* Tablet */
+  </style>
 </footer>
-
-<style>
-  .footer {
-    background-color: #a7e9af; /* Soft green */
-    padding: 2rem;
-    text-align: center;
-    font-family: "Kantumruy Pro", sans-serif;
-  }
-
-  .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .footer-column h3 {
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-
-  .footer-column ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .footer-column li {
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-column a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s ease;
-  }
-
-  .footer-column a:hover {
-    color: #f4a261;
-  }
-
-  .footer-bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .footer-logo {
-    max-height: 50px;
-  }
-
-  /* Social Links */
-  .social-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .social-link {
-    color: #ffffff;
-    font-size: 38px;
-    text-decoration: none;
-  }
-
-  .social-link:hover {
-    color: var(--hover-color);
-  }
-</style>
