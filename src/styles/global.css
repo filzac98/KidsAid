@@ -365,6 +365,10 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.carousel .list .item .content .buttons a {
+  text-decoration: none;
+  color: #fff; /* White text */
+}
 
 /* Button hover state */
 .carousel .list .item .content .buttons:hover {
