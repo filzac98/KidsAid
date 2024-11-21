@@ -420,7 +420,7 @@ body {
 .arrows {
   position: absolute;
   top: 80%;
-  right: 52%;
+  right: 42%;
   width: 300px;
   max-width: 30%;
   display: flex;
@@ -432,7 +432,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #eee4;
+  background-color: #2bd79b;
   border: none;
   font-family: monospace;
   color: #fff;
@@ -443,7 +443,7 @@ body {
 }
 
 .arrows button:hover {
-  background-color: #eee;
+  background-color: #2bd79bc1;
   color: #555;
 }
 
